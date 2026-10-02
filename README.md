@@ -1,12 +1,23 @@
 # cursor-skills
 
-Public Cursor skills for sharing.
+Open-source Cursor agent skills (lab notes / slides toolkit).
 
-## marp-to-master-pptx
+## Skills
 
-Turn Marp markdown + a lab slide master (`.potx`) into a Mac-ready PPTX. This is the SEDA / lab slide (實驗室報告簡報) pipeline.
+| Skill | What it does |
+|-------|----------------|
+| [keynote](./keynote) | New notes file from a source — paste only the key point |
+| [expand](./expand) | Expand a hard word/sentence in the notes file |
+| [contract](./contract) | Shorten a pointed span without harder words |
+| [restructure](./restructure) | Reorder a file for easy reading (causality, knowledge, coarse→fine) |
+| [appendix](./appendix) | Collect only-in-source leftovers into an Appendix |
+| [illustrate](./illustrate) | Add a schematic example figure under a paragraph |
+| [marp-to-master-pptx](./marp-to-master-pptx) | Marp + lab master `.potx` → Mac PPTX (SEDA / 實驗室報告簡報) |
 
-- Skill: [`marp-to-master-pptx/SKILL.md`](./marp-to-master-pptx/SKILL.md)
-- Reference: [`marp-to-master-pptx/reference.md`](./marp-to-master-pptx/reference.md)
+## Install
 
-Install by copying the `marp-to-master-pptx` folder into your Cursor skills / workflows directory, or clone this repo.
+```bash
+git clone https://github.com/IamDoni/cursor-skills.git
+```
+
+Copy a skill folder into your Cursor skills / workflows directory.

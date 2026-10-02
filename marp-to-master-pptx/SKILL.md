@@ -13,6 +13,8 @@ Ask once if md / master / **output path** is missing.
 **Never overwrite** a hand-maintained file (e.g. `Downloads/revieiw/winplace_slides.pptx`)
 unless the user explicitly names it as the output.
 
+**No peeking at a hand-final gold PPTX** during a normal run. Inputs are md + master + images + optional Marp PDF only. Do not open/diff against the user's final deck unless they explicitly ask for a comparison.
+
 ## Specs (lab default)
 
 | Part | Rule |
@@ -33,6 +35,9 @@ unless the user explicitly names it as the output.
 - `.fig-row` → one row; captions under images when present; honor width %
 - `.eq-split` → **two columns**: left eqs/bullets/image, right Symbol table
 - Prefer taller PH / tighter spacing over font shrink when content is dense
+- **Never drop md bullets** to fit figures — shrink/move figures, keep all bullets
+- **Never silently drop** markdown bullets/eqs/tables/images to make room for a figure; shrink the figure (or stack) instead
+- Eq-split: bullets in full-width content PH when possible; eqs left / Symbol table right; if an eq is too wide, park it **above** both columns with ≥0.25″ gap — never overlap table
 - Drop a duplicate trailing appendix page if the md emits two near-identical closers
 
 ## Equations (Mac)
@@ -50,7 +55,7 @@ Native OMML only — no italic `a:t` fakes, no formula PNGs.
 1. Work on a copy; open master; parse md slides.
 2. Place title / body / eqs / tables / images per specs (bullets → content PH first).
 3. Post-process XML (`a14:m`, Cambria Math `a:rPr`); parse-check all slides.
-4. **QA loop (required)** — whole deck, every content slide:
+4. **QA loop (required)** — whole deck vs md/PDF/rules only (not a gold PPTX), every content slide:
    - (a) any body L0 run <20 or L1 <18 → fail
    - (b) `標題及物件` with bullets only in a free TextBox while content PH empty/retired → fail
    - (c) eq-split / two-col text↔eq overlap heuristic → fail
