@@ -13,6 +13,8 @@ Open-source Cursor agent skills (lab notes / slides toolkit).
 | [appendix](./appendix) | Collect only-in-source leftovers into an Appendix |
 | [illustrate](./illustrate) | Add a schematic example figure under a paragraph |
 | [marp-to-master-pptx](./marp-to-master-pptx) | Marp + lab master `.potx` → Mac PPTX (SEDA / 實驗室報告簡報) |
+| [group_meeting](./group_meeting) | Group-meeting Marp deck with English bullets + oral 中文講稿 |
+| [script](./script) | Paper → TTS-friendly Traditional Chinese Marp speaker-note script |
 
 ## Install
 

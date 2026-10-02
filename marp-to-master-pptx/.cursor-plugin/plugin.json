@@ -1,0 +1,8 @@
+{
+  "name": "marp-to-master-pptx",
+  "description": "Turn Marp markdown and a lab slide master into PPTX.",
+  "version": "1.0.0",
+  "author": {
+    "name": "雋凱"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "group-meeting",
+  "description": "Build a group-meeting Marp deck with oral notes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "雋凱"
+  }
+}

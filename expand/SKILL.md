@@ -1,53 +1,39 @@
 ---
 name: expand
 description: >-
-  Answers the user's question about a pointed word or sentence by expanding
-  it in the notes file. Source is only a reference; never paste source text
-  without modification. Use when the user says expand, asks to unpack a hard
-  sentence or word, asks what a word means here, search for what, or wants
-  a difficult part explained in easier words.
+  Unpack a pointed span (or prompt-named scope) by writing into the notes
+  file — not in chat. Follow the prompt for what/how much/where. Use for
+  expand, unpack, what does this mean here, or easier words.
 ---
 # Expand
 
-The main goal is to answer my question or do the things i asked.
+**Deliverable = file edit only.** No expansion body in chat.
+Chat after = one line (scope + file + insert home).
+No file → say so; do not create one.
 
-instead of trying to paste from target.
+## Scope (prompt first)
 
-paste without any modification is not allowed.
-
-source is just where you can refer to.
-
-Expand only the **mentioned** span **in the file**. Chat: one line after
-the edit. Do not dump the expansion in chat.
-
-## Target
-
-The smallest thing pointed at: a selection, a quoted span, one sentence, or
-one word in that sentence. Search the open, recently viewed, or `@` file.
-No matching file → chat-only; do not create a file.
+1. Pointed span (selection / quote / sentence / word) → that only. Default.
+2. Prompt names more → honour it (this paragraph / section / add examples /
+   how deep / keep short).
+3. How much: light gloss vs fuller teach-in — follow the prompt; default =
+   short everyday `>` block.
+4. Unclear → ask once and stop.
 
 ## Write
 
-Read `Source:` if the notes file has one. Use it only to answer the question.
+Source optional. Never paste verbatim. No wild new thesis — teach the ask.
+Object before coined name; ≤1 new hard term per beat.
 
-Write new sentences: what it means here, why it is there, how the pieces
-connect. Short everyday sentences (TOEFL iBT 72). A word → that word in this
-sentence. A sentence → that sentence only. No new claims.
-
-Put the expansion next to the target:
-
-```markdown
-> **thought by you:** <span style="color:red"><the expansion></span>
+```
+> <expansion>
 ```
 
-## Reply
+## Where (unless prompt says otherwise)
 
-File edit: one short restatement, then which span and file.
+1. Object before name.
+2. Just-in-time — first place the reader needs it.
+3. Own section — do not define C inside B.
+4. Own beat — `>` block; do not splice into an unrelated sentence.
 
-No file:
-
-```markdown
-**Target:** "<exact word or sentence>"
-**In simple words:** <span style="color:red"><plain meaning></span>
-**Deeper:** <span style="color:red"><why it matters here></span>
-```
+Default: before first use of the hard name in its section.

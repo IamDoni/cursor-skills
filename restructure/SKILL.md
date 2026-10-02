@@ -1,52 +1,48 @@
 ---
 name: restructure
 description: >-
-  Restructures a file so it is easier to read. Four steps: delete identical titles/sentences and
-  repeated explanations, sort units by causality, just-in-time, knowledge,
-  coarse-to-fine, then one idea per beat, then build a new heading tree
-  whose titles name each section's purpose (motivation, problem formulation,
-  preliminary, proposed method, evaluation), then split long paragraphs
-  into small beats. Coarse-to-fine applies only to concepts, not descriptions:
-  sketch the big idea in everyday words first, then attach coined names.
-  By knowledge priority, describe the object first (what 視窗 is, what
-  the order queue is), then attach the stage name. Do not open a map
-  with 視窗化初始化. Does not keep original stock titles such
-  as 緒論 or 相關工作.
-  Does not keep a hollow original skeleton. Does not insert leftover
-  "see Section N" / "見第 N 節" sentences. Use when the user
-  says restructure, rearrange, realize, reorder, delete redundant, causality,
-  knowledge order, teach first, just-in-time, one idea per beat, too detailed
-  for the introduction, do not repeat, redundant,
-  or asks to sequence a file so A is realized before B.
+  Copy one file, then rewrite the copy as textbook teaching prose: one new
+  idea per beat, everyday object before coined name, ≤1 hard term per
+  paragraph; put each figure at its teaching-home. Never edit the original.
+  Use for restructure, reorder, delete redundant, teach first, just-in-time,
+  or sequence so A is clear before B.
 ---
 # Restructure
 
-Make **one file** easier to read. Meaning unchanged. Four steps **in order** — do not shuffle under old headings.
+**Never edit the original.** Copy first, then rewrite only the copy.
 
-1. **Delete repeats** — identical titles/sentences first; each concept explained once.
-2. **Sort, then new headings** — titles name **purpose**, not topic. Each heading contains nested sub-headings. Renumber from 1.
-3. **Split** — one idea per small paragraph.
+1. Target = attached / `@path` / focused file. No file → ask which; do not invent one.
+2. `OUT = same-dir/R_<original-filename>` (keep extension). If `OUT` exists, overwrite the copy only.
+3. Copy original → `OUT`, then run the pipeline on `OUT`.
+4. Leave the original bytes unchanged.
 
-Edit the attached, `@path`, or focused file immediately. No file → say which to attach; do not create one.
+Meaning unchanged. Voice: patient textbook. Each sentence earns the next.
 
-## Sort (first wins)
+## Pipeline (only this order)
 
-Order the file so a reader can follow it.
-
-1. **Causality** — put A and B before C if C is because of them. "We propose X" after the problem and prior work.
-2. **Knowledge** — put everyday objects name before difficult proper noun.
-3. **Coarse-to-fine** — put the idea and concept before detailed mechanism.
+1. **Atomize** — one claim / step / definition per beat.
+2. **Dedupe** — explain each idea once; later = short recall only.
+3. **Order** (tie-break): causality → knowledge (object before name) → coarse-to-fine.
+4. **House** — new purpose headings; nest; drop stock titles (`緒論`, `相關工作`,
+   `Introduction`, …) and hollow skeletons. Arc: known picture → felt problem →
+   one hard name → next dependency → use/limits.
+5. **Figures** — move each figure to its own section; unit =
+   setup → figure+caption → read-out. Just-in-time; never a pile at top/end;
+   caption adds no extra hard-name dump.
+6. **Polish** — ≤1 new coined name per paragraph; keep eq+symbols together;
+   delete "see Section N" leftovers.
+7. **Test** — term before picture, two hard names in one paragraph, section k
+   not preparing k+1, or figure before its setup → fix.
 
 ## Homes
 
-Do not let the file jump between two topic. For example: you can put the relationship description in the topic B's description, but you can't put the topic C's description in the topic B's description.
+No topic jumping: do not define C inside B. Opening = problem only.
 
-Headings name purpose (motivation, prior limits, formulation, method, 評估), not a topic dump like sequence problem. Nest sub-headings under the parent they belong to; do not flatten the tree. Opening = the encountered problem only. Move method dumps and prior-method dumps to those homes.
+## Example
 
-## Split
-
-Natural beats: cause|effect, name|procedure, claim|evidence. Travel together: heading+its sub-headings, heading+body, paragraph+figure, equation+its symbol sentence. No empty stages, no new claims.
+Bad: `視窗化初始化先掃描序佇列…`
+Good: order queue → window → windowed init.
 
 ## Reply
 
-Say what you did in short.
+Report `OUT` path. What moved, what you cut, where figures went, new arc — one short note.

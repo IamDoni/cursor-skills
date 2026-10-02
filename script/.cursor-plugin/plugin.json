@@ -1,0 +1,8 @@
+{
+  "name": "script",
+  "description": "Turn a paper into a TTS-friendly Traditional Chinese slide script.",
+  "version": "1.0.0",
+  "author": {
+    "name": "雋凱"
+  }
+}

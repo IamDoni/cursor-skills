@@ -1,0 +1,56 @@
+{
+  "name": "cursor-skills",
+  "owner": {
+    "name": "雋凱"
+  },
+  "metadata": {
+    "description": "Personal teaching and slide skills"
+  },
+  "plugins": [
+    {
+      "name": "appendix",
+      "source": "appendix",
+      "description": "Collect source-only leftover text into an Appendix."
+    },
+    {
+      "name": "contract",
+      "source": "contract",
+      "description": "Tighten pointed text without harder words."
+    },
+    {
+      "name": "expand",
+      "source": "expand",
+      "description": "Unpack a pointed span into the notes file."
+    },
+    {
+      "name": "group-meeting",
+      "source": "group_meeting",
+      "description": "Build a group-meeting Marp deck with oral notes."
+    },
+    {
+      "name": "illustrate",
+      "source": "illustrate",
+      "description": "Add a schematic example figure under a paragraph."
+    },
+    {
+      "name": "keynote",
+      "source": "keynote",
+      "description": "Start notes from the key point of a source."
+    },
+    {
+      "name": "marp-to-master-pptx",
+      "source": "marp-to-master-pptx",
+      "description": "Turn Marp markdown and a lab slide master into PPTX."
+    },
+    {
+      "name": "restructure",
+      "source": "restructure",
+      "description": "Rewrite a copy as textbook teaching prose."
+    },
+    {
+      "name": "script",
+      "source": "script",
+      "description": "Turn a paper into a TTS-friendly Traditional Chinese slide script."
+    }
+  ]
+}
